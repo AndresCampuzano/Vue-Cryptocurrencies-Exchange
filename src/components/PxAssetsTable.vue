@@ -25,16 +25,25 @@
               `https://static.coincap.io/assets/icons/${x.symbol.toLowerCase()}@2x.png`
             "
             :alt="x.name"
-            class="h-16 w-16"
+            class="h-10 w-10"
           />
         </td>
         <td>
           <b># {{ x.rank }}</b>
         </td>
         <td>{{ x.name }}</td>
-        <td>{{ x.priceUsd }}</td>
-        <td>{{ x.marketCapUsd }}</td>
-        <td>{{ x.changePercent24Hr }}</td>
+        <td>{{ x.priceUsd | dollar }}</td>
+        <td>{{ x.marketCapUsd | dollar }}</td>
+        <td
+          :class="
+            x.changePercent24Hr.includes('-')
+              ? 'text-red-600'
+              : 'text-green-600'
+          "
+          id="thisDoesNothing"
+        >
+          {{ x.changePercent24Hr | percent }}
+        </td>
         <td class="hidden sm:block"></td>
       </tr>
     </tbody>
