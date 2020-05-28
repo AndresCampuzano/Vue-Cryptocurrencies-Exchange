@@ -31,7 +31,17 @@
         <td>
           <b># {{ x.rank }}</b>
         </td>
-        <td>{{ x.name }}</td>
+        <td>
+          <router-link
+            class="hover: underline text-green-600"
+            :to="{ name: 'coin-detail', params: { id: x.id } }"
+          >
+            {{ x.name }}
+            <small class="ml-1 text-gray-500">
+              {{ x.symbol }}
+            </small>
+          </router-link>
+        </td>
         <td>{{ x.priceUsd | dollar }}</td>
         <td>{{ x.marketCapUsd | dollar }}</td>
         <td
@@ -65,11 +75,11 @@ export default {
 
 <style scoped>
 .up::before {
-  content: '👆';
+  content: '🔼';
 }
 
 .down::before {
-  content: '👇';
+  content: '🔻';
 }
 
 td {

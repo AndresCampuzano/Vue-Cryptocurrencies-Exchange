@@ -5,8 +5,10 @@
         class="flex items-center justify-between flex-wrap customColorHeader p-6"
       >
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <PxIcon class="mr-2" />
-          <span class="font-semibold text-xl tracking-tight">Vue Crypto</span>
+          <router-link :to="{ name: 'home' }" class="flex">
+            <PxIcon class="mr-2" />
+            <span class="font-semibold text-xl tracking-tight">Vue Crypto</span>
+          </router-link>
         </div>
         <div
           class="hidden sm:block w-full block flex-grow lg:flex lg:items-center lg:w-auto"
@@ -30,14 +32,11 @@ export default {
 
 <style scoped>
 .customColorHeader {
-  background-image: linear-gradient(
-    to right,
-    rgb(63, 81, 181),
-    rgb(100, 181, 246)
-  ) !important;
+  background-image: linear-gradient(to right, #3f51b5, #64b5f6) !important;
 }
 
 .customWidthHeader {
   width: 100%;
+  position: fixed;
 }
 </style>
