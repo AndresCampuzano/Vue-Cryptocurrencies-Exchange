@@ -10,7 +10,7 @@
       >
     </p>
 
-    <router-link to="/" class="mt-5 text-xl text-green-600 hover:underline"
+    <router-link to="/" class="mt-5 text-xl text-blue-600 hover:underline"
       >Go back to Home</router-link
     >
   </div>

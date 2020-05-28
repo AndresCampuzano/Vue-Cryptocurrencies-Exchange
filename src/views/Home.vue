@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bounce-loader :loading="isLoading" :color="'#5286D7'" size="100" />
+    <bounce-loader :loading="isLoading" :color="'#5286D7'" :size="100" />
     <PxAssetsTable v-if="!isLoading" :assets="assets" />
   </div>
 </template>
