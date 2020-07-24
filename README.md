@@ -1,5 +1,7 @@
 # vue-crypto
 
+This is a platform that will serve you to visualize all cryptocurrencies in real time, it was created with Vue.js.
+
 ## Project setup
 ```
 npm install
